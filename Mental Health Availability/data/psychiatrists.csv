@@ -1,4 +1,4 @@
-,CountryCode,HealthAvailVal,Period,FactValueNumeric
+,SpatialDimValueCode,HealthAvailVal_psych,Period,FactValueNumeric
 1,AFG,0.231,2016,6.01
 4,ALB,1.471,2016,4.17
 6,AGO,0.057,2016,12.87

@@ -1,4 +1,4 @@
-,CountryCode,HealthAvailVal,Period,FactValueNumeric
+,SpatialDimValueCode,HealthAvailVal_nurse,Period,FactValueNumeric
 1,AFG,0.098,2016,6.01
 4,ALB,6.876,2016,4.17
 6,AGO,0.66,2016,12.87
