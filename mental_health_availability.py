@@ -32,6 +32,7 @@ def create_db(data, countries, GHO):
     data = data.merge(countries, left_on="SpatialDimensionValueCode", right_on="Code").drop(columns = ["Code"])
     data = data.rename(columns = {"SpatialDimensionValueCode": "CountryCode", "Title_x": "DataName", "Title_y": "Country"})
     data = data.merge(df, left_on=["CountryCode", "TimeDim"], right_on=["SpatialDimValueCode", "Period"])
+    data = data[data["Dim1"] == "Both sexes"]
     data = data.drop(columns = ["FactValueNumericHighPrefix", 
                                       "FactValueTranslationID", 
                                       "FactComments", 
@@ -59,7 +60,17 @@ def create_db(data, countries, GHO):
                                       "ParentLocation",
                                       "ParentLocationCode",
                                       "SpatialDimValueCode",
-                                      "Location type"])
+                                      "Location type",
+                                      "NumericValue",
+                                      "Country",
+                                      "Location",
+                                      "FactValueNumericLow",
+                                      "FactValueNumericHigh",
+                                      "Value_y",
+                                      "DataName",
+                                      "Indicator",
+                                      "Dim1"])
+    data = data.rename(columns = {"Value_x": "HealthAvailVal"})
     return data
 
 create_db(data[0], countries, GHO).to_csv("Mental Health Availability/data/psychiatrists.csv")
@@ -67,13 +78,4 @@ create_db(data[1], countries, GHO).to_csv("Mental Health Availability/data/nurse
 
 for i in range(15):
     data[i] = create_db(data[i], countries=countries, GHO=GHO)
-    # print(data[i].head())
     print(data[i].Period.unique())
-
-# for i in range(15):
-#     plotScatter(data[i])
-
-# plotScatter(data[0])
-
-# Keep vs. Not
-# Keep: Psychiatrists, nurses
