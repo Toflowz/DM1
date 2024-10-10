@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-merged_data = pd.read_csv('cleaned_suicide_health_expenditure.csv')
+merged_data = pd.read_csv('Health Expenditure/cleaned_suicide_health_expenditure.csv')
 
 merged_data['Value'] = pd.to_numeric(merged_data['Value'], errors='coerce')
 merged_data['Health_Expenditure'] = pd.to_numeric(merged_data['Health_Expenditure'], errors='coerce')
