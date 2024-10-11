@@ -37,7 +37,7 @@ minmax_scaled[info_columns] = MinMaxScaler().fit_transform(combined_df[info_colu
 
 minmax_scaled.to_csv("complete_data_minmax.csv")
 
-def plot_data(labels):
+def plot_data(data, labels):
     # create combinations of columns
     combos = product(["HealthAvailVal_nurse",
                     "suicide_rate",
@@ -47,14 +47,14 @@ def plot_data(labels):
     combos = product(info_columns, ["suicide_rate"])
 
     # create subplots
-    fig, axes = plt.subplots(nrows=len(minmax_scaled.columns)-2, ncols=1)
+    fig, axes = plt.subplots(nrows=len(data.columns)-2, ncols=1)
 
     # flatten axes into a 1d array
     axes = axes.flat
 
     # iterate and plot
     for (x, y), ax in zip(combos, axes):
-        ax.scatter(minmax_scaled[x], minmax_scaled[y], c=labels)
+        ax.scatter(data[x], data[y], c=labels)
         ax.set(title=f'{x} vs. {y}', xlabel=x, ylabel=y)
         # ax.set(xlabel=x, ylabel=y)
         # ax.set(title=f'{x} vs. {y}')
@@ -68,9 +68,9 @@ for i in [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]:
     kmeans[-1].fit(minmax_scaled[info_columns])
     print("Davies Bouldin: " + str(dv.davies_bouldin_score(minmax_scaled[info_columns], kmeans[-1].labels_)))
 
-# plot_data(kmeans[0].labels_)
-# plot_data(kmeans[5].labels_)
-# plot_data(kmeans[9].labels_)
+plot_data(minmax_scaled, kmeans[0].labels_)
+plot_data(minmax_scaled, kmeans[5].labels_)
+plot_data(minmax_scaled, kmeans[9].labels_)
 
 print(combined_df.head(10))
 print(minmax_scaled.head(10))
