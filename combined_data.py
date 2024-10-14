@@ -5,15 +5,16 @@ import matplotlib.pyplot as plt
 import sklearn.cluster as cl
 import sklearn.metrics as dv
 
-nurses_df = pd.read_csv("Mental Health Availability/data/nurses.csv").drop(columns="Unnamed: 0")
-psych_df = pd.read_csv("Mental Health Availability/data/psychiatrists.csv").drop(columns="Unnamed: 0")
+nurses_df = pd.read_csv("Mental Health Availability/data/nurses.csv").drop(columns=["Unnamed: 0", "Period", "FactValueNumeric"])
+psych_df = pd.read_csv("Mental Health Availability/data/psychiatrists.csv").drop(columns=["Unnamed: 0", "Period", "FactValueNumeric"])
 alc_df = pd.read_csv("alcohol/cleaned_merged_data.csv")
 hdi_df = pd.read_csv("HDI/df_merged_DimValueCode.csv")
 he_df = pd.read_csv("Health Expenditure/cleaned_suicide_health_expenditure.csv")
 homicide_df = pd.read_csv("Homocide_Support_programs/allDataCleaned.csv")
 
-combined_df = nurses_df.merge(psych_df, on=["SpatialDimValueCode", "Period", "FactValueNumeric"])
-combined_df = combined_df.merge(alc_df, on=["SpatialDimValueCode", "Period", "FactValueNumeric"])
+combined_df = nurses_df.merge(psych_df, on=["SpatialDimValueCode"], how = "outer")
+combined_df.fillna(0)
+combined_df = combined_df.merge(alc_df, on=["SpatialDimValueCode"] )
 combined_df = combined_df.merge(hdi_df, on=["SpatialDimValueCode", "Period", "FactValueNumeric"])
 combined_df = combined_df.merge(he_df, on=["SpatialDimValueCode", "Period", "FactValueNumeric"])
 combined_df = combined_df.merge(homicide_df, on=["SpatialDimValueCode", "Period"]).drop(columns=["Unnamed: 0", "childHomeVisits","elderCare","partnerVioPrevention","youthPrograms"])
@@ -21,7 +22,7 @@ combined_df = combined_df[combined_df["indicator"] == "Human Development Index (
 combined_df = combined_df.rename(columns={"value": "HDI", "FactValueNumeric": "suicide_rate"})
 combined_df = combined_df.drop(columns="index")
 combined_df = combined_df.interpolate(method='linear')
-combined_df.to_csv("complete_data.csv")
+combined_df.to_csv("complete_data_test.csv")
 
 minmax_scaled = combined_df.copy()
 
@@ -35,7 +36,7 @@ info_columns = ["HealthAvailVal_nurse",
 
 minmax_scaled[info_columns] = MinMaxScaler().fit_transform(combined_df[info_columns])
 
-minmax_scaled.to_csv("complete_data_minmax.csv")
+minmax_scaled.to_csv("complete_data_minmax_test.csv")
 
 def plot_data(data, labels):
     # create combinations of columns

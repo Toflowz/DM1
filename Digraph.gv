@@ -1,0 +1,999 @@
+// Association Rules
+digraph {
+	subgraph d0 {
+		"('HDI:2',)"
+	}
+	subgraph d1 {
+		"('HDI:2', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d2 {
+		"('HDI:2', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d3 {
+		"('HealthAvailVal_psych:5',)"
+	}
+	subgraph d4 {
+		"('Health_Expenditure:1',)"
+	}
+	subgraph d5 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:1')"
+	}
+	subgraph d6 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:1')"
+	}
+	subgraph d7 {
+		"('Period:2001',)"
+	}
+	subgraph d8 {
+		"('Period:2000',)"
+	}
+	subgraph d9 {
+		"('Period:2003',)"
+	}
+	subgraph d10 {
+		"('Period:2002',)"
+	}
+	subgraph d11 {
+		"('Period:2004',)"
+	}
+	subgraph d12 {
+		"('suicide_rate:4',)"
+	}
+	subgraph d13 {
+		"('FactValueNumeric_alcohol:7',)"
+	}
+	subgraph d14 {
+		"('HealthAvailVal_nurse:3',)"
+	}
+	subgraph d15 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:3')"
+	}
+	subgraph d16 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:3')"
+	}
+	subgraph d17 {
+		"('FactValueNumeric_alcohol:1', 'HDI:3')"
+	}
+	subgraph d18 {
+		"('HDI:3', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d19 {
+		"('HDI:3', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d20 {
+		"('FactValueNumeric_alcohol:1', 'HDI:3', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d21 {
+		"('FactValueNumeric_alcohol:1', 'HDI:3', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d22 {
+		"('HDI:3', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d23 {
+		"('HDI:3', 'suicide_rate:2')"
+	}
+	subgraph d24 {
+		"('HDI:3', 'HealthAvailVal_nurse:1', 'suicide_rate:2')"
+	}
+	subgraph d25 {
+		"('HDI:3', 'HealthAvailVal_psych:1', 'suicide_rate:2')"
+	}
+	subgraph d26 {
+		"('HDI:3', 'HomicideRate:1')"
+	}
+	subgraph d27 {
+		"('HDI:3', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d28 {
+		"('HDI:3', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d29 {
+		"('HDI:4', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2')"
+	}
+	subgraph d30 {
+		"('HDI:4', 'HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d31 {
+		"('HDI:4', 'suicide_rate:2')"
+	}
+	subgraph d32 {
+		"('HDI:4', 'HealthAvailVal_nurse:1', 'suicide_rate:2')"
+	}
+	subgraph d33 {
+		"('HDI:4', 'HealthAvailVal_psych:1', 'suicide_rate:2')"
+	}
+	subgraph d34 {
+		"('HDI:4', 'HomicideRate:1')"
+	}
+	subgraph d35 {
+		"('HDI:4', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d36 {
+		"('FactValueNumeric_alcohol:1', 'HDI:4', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d37 {
+		"('FactValueNumeric_alcohol:1', 'HDI:4', 'HomicideRate:1')"
+	}
+	subgraph d38 {
+		"('HDI:4', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d39 {
+		"('HDI:4', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d40 {
+		"('FactValueNumeric_alcohol:1', 'HDI:4', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d41 {
+		"('HDI:4', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d42 {
+		"('HDI:4', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d43 {
+		"('FactValueNumeric_alcohol:1', 'HDI:4', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d44 {
+		"('FactValueNumeric_alcohol:1', 'HDI:4', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d45 {
+		"('FactValueNumeric_alcohol:1', 'HDI:4', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d46 {
+		"('HDI:4', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d47 {
+		"('FactValueNumeric_alcohol:6', 'HDI:10')"
+	}
+	subgraph d48 {
+		"('FactValueNumeric_alcohol:6', 'HomicideRate:1')"
+	}
+	subgraph d49 {
+		"('FactValueNumeric_alcohol:6', 'suicide_rate:2')"
+	}
+	subgraph d50 {
+		"('FactValueNumeric_alcohol:2', 'HDI:5')"
+	}
+	subgraph d51 {
+		"('FactValueNumeric_alcohol:1', 'HDI:5')"
+	}
+	subgraph d52 {
+		"('HDI:5', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d53 {
+		"('HDI:5', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d54 {
+		"('HDI:5', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d55 {
+		"('HDI:5', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d56 {
+		"('HDI:5', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d57 {
+		"('HDI:10', 'HealthAvailVal_psych:3')"
+	}
+	subgraph d58 {
+		"('HDI:9', 'HealthAvailVal_psych:3')"
+	}
+	subgraph d59 {
+		"('HealthAvailVal_psych:3', 'suicide_rate:2')"
+	}
+	subgraph d60 {
+		"('HealthAvailVal_psych:3', 'Health_Expenditure:4')"
+	}
+	subgraph d61 {
+		"('HealthAvailVal_psych:2', 'Health_Expenditure:4')"
+	}
+	subgraph d62 {
+		"('HealthAvailVal_nurse:2', 'HealthAvailVal_psych:2')"
+	}
+	subgraph d63 {
+		"('HealthAvailVal_psych:2', 'suicide_rate:2')"
+	}
+	subgraph d64 {
+		"('HDI:8', 'HealthAvailVal_psych:2')"
+	}
+	subgraph d65 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:2')"
+	}
+	subgraph d66 {
+		"('HealthAvailVal_psych:2', 'HomicideRate:1')"
+	}
+	subgraph d67 {
+		"('HDI:10', 'Health_Expenditure:5')"
+	}
+	subgraph d68 {
+		"('HDI:10', 'HomicideRate:1')"
+	}
+	subgraph d69 {
+		"('HDI:10', 'suicide_rate:2')"
+	}
+	subgraph d70 {
+		"('HDI:6', 'Health_Expenditure:2')"
+	}
+	subgraph d71 {
+		"('HDI:6', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2')"
+	}
+	subgraph d72 {
+		"('HDI:6', 'HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d73 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d74 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'HomicideRate:1')"
+	}
+	subgraph d75 {
+		"('HDI:6', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d76 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d77 {
+		"('HDI:6', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d78 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d79 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d80 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d81 {
+		"('HDI:6', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d82 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'suicide_rate:1')"
+	}
+	subgraph d83 {
+		"('HDI:6', 'HealthAvailVal_nurse:1', 'suicide_rate:1')"
+	}
+	subgraph d84 {
+		"('HDI:6', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d85 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'HealthAvailVal_nurse:1', 'suicide_rate:1')"
+	}
+	subgraph d86 {
+		"('FactValueNumeric_alcohol:1', 'HDI:6', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d87 {
+		"('HDI:6', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d88 {
+		"('HDI:6', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d89 {
+		"('HDI:6', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d90 {
+		"('HDI:6', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d91 {
+		"('HDI:6', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d92 {
+		"('FactValueNumeric_alcohol:4', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d93 {
+		"('FactValueNumeric_alcohol:4', 'HealthAvailVal_nurse:1', 'suicide_rate:2')"
+	}
+	subgraph d94 {
+		"('FactValueNumeric_alcohol:4', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d95 {
+		"('FactValueNumeric_alcohol:4', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d96 {
+		"('FactValueNumeric_alcohol:4', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d97 {
+		"('FactValueNumeric_alcohol:4', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d98 {
+		"('FactValueNumeric_alcohol:3', 'HomicideRate:2')"
+	}
+	subgraph d99 {
+		"('FactValueNumeric_alcohol:3', 'suicide_rate:2')"
+	}
+	subgraph d100 {
+		"('FactValueNumeric_alcohol:3', 'HDI:7')"
+	}
+	subgraph d101 {
+		"('FactValueNumeric_alcohol:3', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d102 {
+		"('FactValueNumeric_alcohol:3', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d103 {
+		"('FactValueNumeric_alcohol:3', 'HealthAvailVal_nurse:1', 'suicide_rate:1')"
+	}
+	subgraph d104 {
+		"('FactValueNumeric_alcohol:3', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d105 {
+		"('FactValueNumeric_alcohol:3', 'HomicideRate:1')"
+	}
+	subgraph d106 {
+		"('FactValueNumeric_alcohol:3', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d107 {
+		"('FactValueNumeric_alcohol:3', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d108 {
+		"('FactValueNumeric_alcohol:3', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d109 {
+		"('HDI:9', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d110 {
+		"('HDI:9', 'Health_Expenditure:4')"
+	}
+	subgraph d111 {
+		"('HDI:9', 'suicide_rate:1')"
+	}
+	subgraph d112 {
+		"('FactValueNumeric_alcohol:5', 'HomicideRate:1')"
+	}
+	subgraph d113 {
+		"('FactValueNumeric_alcohol:5', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d114 {
+		"('FactValueNumeric_alcohol:5', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d115 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:5')"
+	}
+	subgraph d116 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:5')"
+	}
+	subgraph d117 {
+		"('Health_Expenditure:5', 'HomicideRate:1')"
+	}
+	subgraph d118 {
+		"('Health_Expenditure:5', 'suicide_rate:2')"
+	}
+	subgraph d119 {
+		"('HomicideRate:2', 'suicide_rate:3')"
+	}
+	subgraph d120 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:2', 'suicide_rate:3')"
+	}
+	subgraph d121 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:2', 'suicide_rate:3')"
+	}
+	subgraph d122 {
+		"('HealthAvailVal_psych:1', 'suicide_rate:3')"
+	}
+	subgraph d123 {
+		"('Health_Expenditure:2', 'suicide_rate:3')"
+	}
+	subgraph d124 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:3')"
+	}
+	subgraph d125 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'suicide_rate:3')"
+	}
+	subgraph d126 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:2', 'suicide_rate:3')"
+	}
+	subgraph d127 {
+		"('HealthAvailVal_nurse:1', 'suicide_rate:3')"
+	}
+	subgraph d128 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:3')"
+	}
+	subgraph d129 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:3')"
+	}
+	subgraph d130 {
+		"('HomicideRate:1', 'suicide_rate:3')"
+	}
+	subgraph d131 {
+		"('FactValueNumeric_alcohol:2', 'suicide_rate:1')"
+	}
+	subgraph d132 {
+		"('FactValueNumeric_alcohol:2', 'Health_Expenditure:3')"
+	}
+	subgraph d133 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'Health_Expenditure:3')"
+	}
+	subgraph d134 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_psych:1', 'Health_Expenditure:3')"
+	}
+	subgraph d135 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2')"
+	}
+	subgraph d136 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d137 {
+		"('FactValueNumeric_alcohol:2', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d138 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d139 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d140 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d141 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d142 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d143 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d144 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'suicide_rate:2')"
+	}
+	subgraph d145 {
+		"('FactValueNumeric_alcohol:2', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d146 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_psych:1', 'suicide_rate:2')"
+	}
+	subgraph d147 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:2')"
+	}
+	subgraph d148 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d149 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d150 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d151 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d152 {
+		"('FactValueNumeric_alcohol:2', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d153 {
+		"('FactValueNumeric_alcohol:1', 'HomicideRate:2')"
+	}
+	subgraph d154 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HomicideRate:2')"
+	}
+	subgraph d155 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'HomicideRate:2')"
+	}
+	subgraph d156 {
+		"('HomicideRate:2', 'suicide_rate:2')"
+	}
+	subgraph d157 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:2', 'suicide_rate:2')"
+	}
+	subgraph d158 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:2', 'suicide_rate:2')"
+	}
+	subgraph d159 {
+		"('HomicideRate:2', 'suicide_rate:1')"
+	}
+	subgraph d160 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:2', 'suicide_rate:1')"
+	}
+	subgraph d161 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:2', 'suicide_rate:1')"
+	}
+	subgraph d162 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'HomicideRate:2')"
+	}
+	subgraph d163 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:2')"
+	}
+	subgraph d164 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'HomicideRate:2')"
+	}
+	subgraph d165 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:2')"
+	}
+	subgraph d166 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:2')"
+	}
+	subgraph d167 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:2')"
+	}
+	subgraph d168 {
+		"('HDI:8', 'HealthAvailVal_nurse:1', 'suicide_rate:2')"
+	}
+	subgraph d169 {
+		"('HDI:8', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d170 {
+		"('HDI:8', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d171 {
+		"('HDI:8', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d172 {
+		"('HDI:8', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d173 {
+		"('HDI:8', 'HealthAvailVal_nurse:1', 'suicide_rate:1')"
+	}
+	subgraph d174 {
+		"('HDI:8', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d175 {
+		"('HDI:8', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d176 {
+		"('HDI:8', 'HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d177 {
+		"('HDI:8', 'HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d178 {
+		"('HDI:8', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d179 {
+		"('HDI:8', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d180 {
+		"('HDI:8', 'HomicideRate:1')"
+	}
+	subgraph d181 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d182 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'suicide_rate:1')"
+	}
+	subgraph d183 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d184 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HomicideRate:1')"
+	}
+	subgraph d185 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d186 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_nurse:1', 'suicide_rate:1')"
+	}
+	subgraph d187 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d188 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d189 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d190 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d191 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d192 {
+		"('HDI:7', 'HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d193 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d194 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d195 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d196 {
+		"('FactValueNumeric_alcohol:1', 'HDI:7', 'HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d197 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d198 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'suicide_rate:2')"
+	}
+	subgraph d199 {
+		"('HDI:7', 'HealthAvailVal_psych:1', 'suicide_rate:2')"
+	}
+	subgraph d200 {
+		"('HDI:7', 'HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d201 {
+		"('HDI:7', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d202 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2')"
+	}
+	subgraph d203 {
+		"('HDI:7', 'HealthAvailVal_psych:1', 'Health_Expenditure:3')"
+	}
+	subgraph d204 {
+		"('HDI:7', 'Health_Expenditure:3', 'HomicideRate:1')"
+	}
+	subgraph d205 {
+		"('HDI:7', 'Health_Expenditure:3', 'suicide_rate:1')"
+	}
+	subgraph d206 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'Health_Expenditure:3')"
+	}
+	subgraph d207 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d208 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'suicide_rate:1')"
+	}
+	subgraph d209 {
+		"('HDI:7', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d210 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d211 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d212 {
+		"('HDI:7', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d213 {
+		"('HDI:7', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d214 {
+		"('HDI:7', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d215 {
+		"('HDI:7', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d216 {
+		"('FactValueNumeric_alcohol:1', 'Health_Expenditure:4')"
+	}
+	subgraph d217 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:4')"
+	}
+	subgraph d218 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:4')"
+	}
+	subgraph d219 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:4', 'suicide_rate:2')"
+	}
+	subgraph d220 {
+		"('Health_Expenditure:4', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d221 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:4', 'HomicideRate:1')"
+	}
+	subgraph d222 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:4', 'suicide_rate:1')"
+	}
+	subgraph d223 {
+		"('Health_Expenditure:4', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d224 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:4', 'HomicideRate:1')"
+	}
+	subgraph d225 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:4', 'suicide_rate:1')"
+	}
+	subgraph d226 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:4', 'HomicideRate:1')"
+	}
+	subgraph d227 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:4', 'suicide_rate:1')"
+	}
+	subgraph d228 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:4', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d229 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:4', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d230 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:4')"
+	}
+	subgraph d231 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:4')"
+	}
+	subgraph d232 {
+		"('Health_Expenditure:4', 'HomicideRate:1')"
+	}
+	subgraph d233 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'suicide_rate:2')"
+	}
+	subgraph d234 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:2', 'suicide_rate:2')"
+	}
+	subgraph d235 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'suicide_rate:2')"
+	}
+	subgraph d236 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d237 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d238 {
+		"('FactValueNumeric_alcohol:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d239 {
+		"('Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d240 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'suicide_rate:1')"
+	}
+	subgraph d241 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d242 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'suicide_rate:1')"
+	}
+	subgraph d243 {
+		"('FactValueNumeric_alcohol:1', 'Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d244 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d245 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:2', 'suicide_rate:1')"
+	}
+	subgraph d246 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d247 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'suicide_rate:1')"
+	}
+	subgraph d248 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d249 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'suicide_rate:1')"
+	}
+	subgraph d250 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d251 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'suicide_rate:1')"
+	}
+	subgraph d252 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d253 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d254 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d255 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:2')"
+	}
+	subgraph d256 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d257 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d258 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d259 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d260 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2', 'HomicideRate:1')"
+	}
+	subgraph d261 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:2')"
+	}
+	subgraph d262 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d263 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:2')"
+	}
+	subgraph d264 {
+		"('FactValueNumeric_alcohol:1', 'Health_Expenditure:3', 'suicide_rate:2')"
+	}
+	subgraph d265 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'suicide_rate:2')"
+	}
+	subgraph d266 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'suicide_rate:2')"
+	}
+	subgraph d267 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'HomicideRate:1')"
+	}
+	subgraph d268 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'suicide_rate:1')"
+	}
+	subgraph d269 {
+		"('FactValueNumeric_alcohol:1', 'Health_Expenditure:3', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d270 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d271 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'suicide_rate:1')"
+	}
+	subgraph d272 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:1')"
+	}
+	subgraph d273 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'suicide_rate:1')"
+	}
+	subgraph d274 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d275 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d276 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d277 {
+		"('FactValueNumeric_alcohol:1', 'Health_Expenditure:3', 'HomicideRate:1')"
+	}
+	subgraph d278 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:1')"
+	}
+	subgraph d279 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d280 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'Health_Expenditure:3')"
+	}
+	subgraph d281 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3')"
+	}
+	subgraph d282 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:1')"
+	}
+	subgraph d283 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3')"
+	}
+	subgraph d284 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:1')"
+	}
+	subgraph d285 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'suicide_rate:2')"
+	}
+	subgraph d286 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:3', 'suicide_rate:2')"
+	}
+	subgraph d287 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'suicide_rate:2')"
+	}
+	subgraph d288 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d289 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:3', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d290 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'suicide_rate:1')"
+	}
+	subgraph d291 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:3', 'suicide_rate:1')"
+	}
+	subgraph d292 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3', 'suicide_rate:1')"
+	}
+	subgraph d293 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:3')"
+	}
+	subgraph d294 {
+		"('HealthAvailVal_psych:1', 'Health_Expenditure:3')"
+	}
+	subgraph d295 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'Health_Expenditure:3')"
+	}
+	subgraph d296 {
+		"('HealthAvailVal_nurse:1', 'Health_Expenditure:3', 'HomicideRate:1')"
+	}
+	subgraph d297 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'suicide_rate:2')"
+	}
+	subgraph d298 {
+		"('FactValueNumeric_alcohol:1', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d299 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'suicide_rate:2')"
+	}
+	subgraph d300 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:2')"
+	}
+	subgraph d301 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d302 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d303 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1')"
+	}
+	subgraph d304 {
+		"('HealthAvailVal_nurse:1', 'suicide_rate:1')"
+	}
+	subgraph d305 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+	subgraph d306 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'suicide_rate:1')"
+	}
+	subgraph d307 {
+		"('FactValueNumeric_alcohol:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d308 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d309 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d310 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d311 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d312 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d313 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d314 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d315 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d316 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d317 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d318 {
+		"('FactValueNumeric_alcohol:1', 'HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d319 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:1')"
+	}
+	subgraph d320 {
+		"('HealthAvailVal_psych:1', 'suicide_rate:1')"
+	}
+	subgraph d321 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d322 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'HomicideRate:1')"
+	}
+	subgraph d323 {
+		"('HealthAvailVal_nurse:1', 'suicide_rate:2')"
+	}
+	subgraph d324 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1', 'suicide_rate:2')"
+	}
+	subgraph d325 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d326 {
+		"('HealthAvailVal_psych:1', 'HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d327 {
+		"('HomicideRate:1', 'suicide_rate:2')"
+	}
+	subgraph d328 {
+		"('HomicideRate:1',)"
+	}
+	subgraph d329 {
+		"('HealthAvailVal_nurse:1',)"
+	}
+	subgraph d330 {
+		"('HealthAvailVal_nurse:1', 'HealthAvailVal_psych:1')"
+	}
+	subgraph d331 {
+		"('HealthAvailVal_nurse:1', 'HomicideRate:1')"
+	}
+}

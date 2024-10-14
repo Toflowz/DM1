@@ -1,0 +1,20 @@
+// Association Rules
+digraph {
+	rankdir=LR
+	"FactValueNumeric_alcohol;6, HomicideRate;1" -> "suicide_rate;2," [label=0.5511111111111111]
+	"HDI;10, HomicideRate;1" -> "suicide_rate;2," [label=0.7631578947368421]
+	"FactValueNumeric_alcohol;1, HDI;6, HealthAvailVal_nurse;1, HealthAvailVal_psych;1" -> "suicide_rate;1," [label=0.8907563025210085]
+	"FactValueNumeric_alcohol;3, HealthAvailVal_nurse;1, HealthAvailVal_psych;1" -> "suicide_rate;1," [label=0.536]
+	"FactValueNumeric_alcohol;2, HealthAvailVal_nurse;1, HealthAvailVal_psych;1, HomicideRate;1" -> "suicide_rate;2," [label=0.645]
+	"HDI;8, HealthAvailVal_nurse;1, HealthAvailVal_psych;1, HomicideRate;1" -> "suicide_rate;1," [label=0.7926829268292683]
+	"FactValueNumeric_alcohol;1, HDI;7, HealthAvailVal_nurse;1" -> "HealthAvailVal_psych;1, HomicideRate;1, suicide_rate;1" [label=0.9107142857142857]
+	"FactValueNumeric_alcohol;1, HDI;7, HealthAvailVal_nurse;1, HealthAvailVal_psych;1" -> "HomicideRate;1, suicide_rate;1" [label=0.9107142857142857]
+	"FactValueNumeric_alcohol;1, HDI;7, HealthAvailVal_nurse;1, HomicideRate;1" -> "HealthAvailVal_psych;1, suicide_rate;1" [label=0.9107142857142857]
+	"FactValueNumeric_alcohol;1, HDI;7, HealthAvailVal_psych;1, HomicideRate;1" -> "suicide_rate;1," [label=0.9285714285714286]
+	"FactValueNumeric_alcohol;1, HDI;7, HealthAvailVal_nurse;1, HealthAvailVal_psych;1, HomicideRate;1" -> "suicide_rate;1," [label=0.9107142857142857]
+	"HDI;7, HealthAvailVal_nurse;1, HealthAvailVal_psych;1, HomicideRate;1" -> "suicide_rate;1," [label=0.5675675675675675]
+	"HealthAvailVal_nurse;1, HealthAvailVal_psych;1, Health_Expenditure;4, HomicideRate;1" -> "suicide_rate;1," [label=0.6265060240963856]
+	"FactValueNumeric_alcohol;1, HealthAvailVal_nurse;1, HealthAvailVal_psych;1, Health_Expenditure;2, HomicideRate;1" -> "suicide_rate;1," [label=0.5658914728682171]
+	"FactValueNumeric_alcohol;1, HealthAvailVal_nurse;1, HealthAvailVal_psych;1, Health_Expenditure;3, HomicideRate;1" -> "suicide_rate;1," [label=0.5235602094240838]
+	"FactValueNumeric_alcohol;1, HealthAvailVal_nurse;1, HealthAvailVal_psych;1, HomicideRate;1" -> "suicide_rate;1," [label=0.6029629629629629]
+}
